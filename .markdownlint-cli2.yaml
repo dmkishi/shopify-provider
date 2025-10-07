@@ -1,0 +1,17 @@
+gitignore: true
+globs: ["**/*.md"]
+config:
+  heading-style:
+    style: setext_with_atx
+  line-length: false
+  blanks-around-headings: false
+  no-inline-html: false
+
+  # Agree but prefer no blanks beneath headings.
+  blanks-around-fences: false
+  blanks-around-lists: false
+  blanks-around-tables: false
+
+  # Emits false negatives when last cell is empty without a trailing pipe.
+  table-pipe-style: false
+  table-column-count: false

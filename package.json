@@ -1,0 +1,39 @@
+{
+  "name": "@dmkishi/shopify-provider",
+  "version": "1.0.0",
+  "private": true,
+  "author": "DM Kishi <dm.kishi@gmail.com>",
+  "homepage": "https://github.com/dmkishi/shopify-provider/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmkishi/shopify-provider.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "deploy": "",
+    "build": "npm run build:clean && npm run build:esm",
+    "build:esm": "tsc",
+    "build:clean": "rm -rf ./dist/*"
+  },
+  "dependencies": {
+    "@shopify/admin-api-client": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.0",
+    "typescript": "^5.9.3"
+  }
+}

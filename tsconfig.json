@@ -1,0 +1,33 @@
+// https://tsconfig.guide
+{
+  "compilerOptions": {
+    // Base Options: recommended for all projects
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+
+    // Strictness: enable strict type checking
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    // Transpile to JavaScript
+    "module": "NodeNext",
+    "outDir": "dist",
+
+    // Emit type declarations (if you're building for a library)
+    "declaration": true,
+
+    "lib": [
+      "es2022"
+    ],
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
