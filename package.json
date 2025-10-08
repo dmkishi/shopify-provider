@@ -1,7 +1,6 @@
 {
   "name": "@dmkishi/shopify-provider",
   "version": "1.0.0",
-  "private": true,
   "author": "DM Kishi <dm.kishi@gmail.com>",
   "homepage": "https://github.com/dmkishi/shopify-provider/",
   "repository": {
