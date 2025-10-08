@@ -1,5 +1,6 @@
 {
   "name": "@dmkishi/shopify-provider",
+  "description": "A nicer interface to the Shopify GraphQL Admin API with built-in support for bulk operations.",
   "version": "1.0.1",
   "author": "DM Kishi <dm.kishi@gmail.com>",
   "homepage": "https://github.com/dmkishi/shopify-provider/",
