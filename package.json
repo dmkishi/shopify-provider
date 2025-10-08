@@ -24,16 +24,18 @@
     "dist"
   ],
   "scripts": {
-    "deploy": "",
+    "publish": "sh .husky/pre-push && npm run build && npm publish",
     "build": "npm run build:clean && npm run build:esm",
     "build:esm": "tsc",
-    "build:clean": "rm -rf ./dist/*"
+    "build:clean": "rm -rf ./dist/*",
+    "prepare": "husky"
   },
   "dependencies": {
     "@shopify/admin-api-client": "^1.1.1"
   },
   "devDependencies": {
     "@types/node": "^24.7.0",
+    "husky": "^9.1.7",
     "typescript": "^5.9.3"
   }
 }

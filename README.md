@@ -58,5 +58,5 @@ const data = await shopifyProvider.bulkOperation(/* graphql */`
 Develop
 --------------------------------------------------------------------------------
 ```sh
-npm publish
+npm run publish
 ```
