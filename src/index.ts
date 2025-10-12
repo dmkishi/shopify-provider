@@ -7,7 +7,10 @@ export default class ShopifyProvider {
     this.client = createAdminApiClient(apiCredential);
   }
 
-  async bulkOperation(query: string, pollFrequencyMs = 2_500) {
+  /**
+   * Make bulk operation query and get results as an object (instead of JSONL.)
+   */
+  async bulkOperation(query: string, pollFrequencyMs = 2_500): Promise<object> {
     const {data, errors} = await this.client.request(/* graphql */`
       mutation {
         bulkOperationRunQuery(
