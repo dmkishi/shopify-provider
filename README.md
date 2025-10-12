@@ -1,6 +1,5 @@
 Shopify Provider (Private NPM Package)
 ================================================================================
-A nicer interface to the [Shopify GraphQL Admin API](https://shopify.dev/docs/api/admin-graphql) with built-in support for [bulk operations](https://shopify.dev/docs/api/usage/bulk-operations).
 
 ### Private NPM Package
 This is (or ought to be) entirely private:
@@ -9,6 +8,7 @@ This is (or ought to be) entirely private:
   - A GitHub Personal Access Token is required for access.
   - An `.npmrc` file must be configured providing the registry address and access token.
   - The access token itself should be kept out of version control and instead provided via an environment variable, e.g. `~/.zshenv.local`.
+Simple wrapper over the [Shopify GraphQL Admin API](https://shopify.dev/docs/api/admin-graphql) with a handy abstraction for [bulk operations](https://shopify.dev/docs/api/usage/bulk-operations).
 
 Install
 --------------------------------------------------------------------------------
