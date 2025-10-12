@@ -30,17 +30,16 @@ npm install --save @dmkishi/shopify-provider
 Usage
 --------------------------------------------------------------------------------
 ```ts
-import dotenv from 'dotenv';
 import ShopifyProvider from '@dmkishi/shopify-provider';
+import 'dotenv/config';
 
-dotenv.config();
 const shopifyProvider = new ShopifyProvider({
   storeDomain: process.env.SHOPIFY_DOMAIN!,
   apiVersion: process.env.SHOPIFY_ADMIN_API_VERSION!,
   accessToken: process.env.SHOPIFY_ADMIN_API_ACCESS_TOKEN!,
 });
 
-const data = await shopifyProvider.bulkOperation(/* graphql */`
+const products = await shopifyProvider.bulkOperation(/* graphql */`
   {
     products {
       edges {
@@ -53,10 +52,12 @@ const data = await shopifyProvider.bulkOperation(/* graphql */`
   }
 `);
 
+console.log(products); // [{ title: "Product Title", id: "123" }, ... ]
 ```
 
 Develop
 --------------------------------------------------------------------------------
 ```sh
+# Build and publish
 npm run publish
 ```
