@@ -1,28 +1,9 @@
-Shopify Provider (Private NPM Package)
+Shopify Provider
 ================================================================================
-
-### Private NPM Package
-This is (or ought to be) entirely private:
-- Privately hosted on a GitHub repo.
-- Privately hosted on an alternate NPM registry at GitHub Packages.
-  - A GitHub Personal Access Token is required for access.
-  - An `.npmrc` file must be configured providing the registry address and access token.
-  - The access token itself should be kept out of version control and instead provided via an environment variable, e.g. `~/.zshenv.local`.
 Simple wrapper over the [Shopify GraphQL Admin API](https://shopify.dev/docs/api/admin-graphql) with a handy abstraction for [bulk operations](https://shopify.dev/docs/api/usage/bulk-operations).
 
 Install
 --------------------------------------------------------------------------------
-### 1. Configure `.npmrc`
-Create or edit `.npmrc` on the project root:
-
-```text
-//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN_READ_ONLY}
-@dmkishi:registry=https://npm.pkg.github.com/
-```
-
-Verify it's working with `npm whoami --registry=https://npm.pkg.github.com/`. It should return `dmkishi`.
-
-### 2. Install
 ```sh
 npm install --save @dmkishi/shopify-provider
 ```
