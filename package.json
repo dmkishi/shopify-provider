@@ -1,7 +1,7 @@
 {
   "name": "@dmkishi/shopify-provider",
   "description": "Simple wrapper over the Shopify GraphQL Admin API w/ handy abstraction for bulk operations.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "DM Kishi <dm.kishi@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/dmkishi/shopify-provider/",
