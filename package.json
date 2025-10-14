@@ -4,7 +4,6 @@
   "version": "1.0.3",
   "author": "DM Kishi <dm.kishi@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/dmkishi/shopify-provider/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dmkishi/shopify-provider.git"
