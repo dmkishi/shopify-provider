@@ -12,7 +12,6 @@ Usage
 --------------------------------------------------------------------------------
 ```ts
 import ShopifyProvider from '@dmkishi/shopify-provider';
-import 'dotenv/config';
 
 type Product = {
   title: string
@@ -20,9 +19,9 @@ type Product = {
 };
 
 const shopifyProvider = new ShopifyProvider({
-  storeDomain: process.env.SHOPIFY_DOMAIN!,
-  apiVersion: process.env.SHOPIFY_ADMIN_API_VERSION!,
-  accessToken: process.env.SHOPIFY_ADMIN_API_ACCESS_TOKEN!,
+  storeDomain: 'example.myshopify.com',
+  apiVersion: '2025-10',
+  accessToken: 'shpat_EXAMPLE',
 });
 
 // Optionally provide a type parameter, or omit for `any[]`.
