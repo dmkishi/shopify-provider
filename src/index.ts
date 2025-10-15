@@ -12,9 +12,9 @@ export default class ShopifyProvider {
    *
    * @param query - GraphQL query fragment to run as a bulk operation.
    * @param pollFrequencyMs - Polling interval in milliseconds (default: 2500).
-   * @returns Promise resolving to an array of result objects.
+   * @returns Promise resolving to an array.
    */
-  async bulkOperation(query: string, pollFrequencyMs = 2_500): Promise<object[]> {
+  async bulkOperation<T = any>(query: string, pollFrequencyMs = 2_500): Promise<T[]> {
     const {data, errors} = await this.client.request(/* graphql */`
       mutation {
         bulkOperationRunQuery(
