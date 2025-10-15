@@ -14,26 +14,32 @@ Usage
 import ShopifyProvider from '@dmkishi/shopify-provider';
 import 'dotenv/config';
 
+type Product = {
+  title: string
+  tags: string[]
+};
+
 const shopifyProvider = new ShopifyProvider({
   storeDomain: process.env.SHOPIFY_DOMAIN!,
   apiVersion: process.env.SHOPIFY_ADMIN_API_VERSION!,
   accessToken: process.env.SHOPIFY_ADMIN_API_ACCESS_TOKEN!,
 });
 
-const products = await shopifyProvider.bulkOperation(/* graphql */`
+// Optionally provide a type parameter, or omit for `any[]`.
+const products = await shopifyProvider.bulkOperation<Product>(/* graphql */`
   {
     products {
       edges {
         node {
           title
-          id
+          tags
         }
       }
     }
   }
 `);
 
-console.log(products); // [{ title: "Product Title", id: "123" }, ... ]
+console.log(products); // [{ title: "Title", tags: ["Tag"] }, ... ]
 ```
 
 Develop
