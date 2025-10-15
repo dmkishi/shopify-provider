@@ -3,6 +3,8 @@ globs: ["**/*.md"]
 config:
   heading-style:
     style: setext_with_atx
+  no-duplicate-heading:
+    siblings_only: true
   line-length: false
   blanks-around-headings: false
   no-inline-html: false
